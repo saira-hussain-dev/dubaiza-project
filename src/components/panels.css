@@ -1,0 +1,45 @@
+
+/* NEW styles for the fix - App.css is untouched. */
+.link-btn { background: none; color: var(--red); font-weight: 700; font-size: 15px; padding: 0; }
+.modal-sub { color: var(--grey); font-size: 14px; margin-bottom: 16px; }
+.auth-modal { text-align: left; }
+.auth-tabs { display: flex; gap: 8px; margin: 14px 0; }
+.form-col { display: flex; flex-direction: column; gap: 12px; text-align: left; }
+.form-col label { font-weight: 700; font-size: 14px; display: flex; flex-direction: column; gap: 6px; }
+.form-col input, .form-col select, .form-col textarea { border: 1.5px solid var(--border); border-radius: 10px; padding: 12px; font-size: 15px; width: 100%; background: #fff; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-error { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; padding: 12px; border-radius: 10px; font-weight: 600; }
+.form-success { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; padding: 12px; border-radius: 10px; font-weight: 600; }
+.form-note, .demo-note { font-size: 13px; color: var(--grey); margin-top: 14px; }
+.demo-note { background: var(--red-light); padding: 12px; border-radius: 10px; line-height: 1.5; }
+.chat-modal { max-width: 860px; text-align: left; }
+.chat-layout { display: grid; grid-template-columns: 260px 1fr; gap: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; min-height: 380px; }
+.chat-list { background: #f9fafb; border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+.chat-item { background: none; text-align: left; padding: 14px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 2px; position: relative; }
+.chat-item.active { background: #fff; border-left: 4px solid var(--red); }
+.chat-item span { color: var(--grey); font-size: 13px; }
+.chat-preview { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.badge.inline { position: static; display: inline-block; width: fit-content; margin-top: 4px; }
+.chat-window { display: flex; flex-direction: column; }
+.chat-header { padding: 14px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; }
+.chat-header span { color: var(--grey); font-size: 13px; }
+.chat-messages { flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow: auto; }
+.bubble { max-width: 80%; padding: 10px 14px; border-radius: 16px; font-size: 15px; }
+.bubble.me { background: var(--red); color: #fff; align-self: flex-end; }
+.bubble.them { background: var(--light-grey); align-self: flex-start; }
+.chat-form { display: flex; gap: 10px; padding: 12px; border-top: 1px solid var(--border); }
+.chat-form input { flex: 1; border: 1.5px solid var(--border); border-radius: 10px; padding: 12px; }
+.panel-actions { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.notif-list { display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.notif-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 14px; text-align: left; display: flex; flex-direction: column; gap: 2px; }
+.notif-item:not(.read) { border-color: var(--red); background: var(--red-light); }
+.notif-item span { color: var(--grey); font-size: 13px; }
+.notif-time { font-size: 12px !important; }
+.empty-state { text-align: center; padding: 24px; }
+.empty-icon { font-size: 48px; }
+
+@media (max-width: 700px) {
+  .chat-layout { grid-template-columns: 1fr; }
+  .chat-list { flex-direction: row; overflow-x: auto; border-right: none; border-bottom: 1px solid var(--border); }
+  .form-row { grid-template-columns: 1fr; }
+}
